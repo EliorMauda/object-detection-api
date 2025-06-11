@@ -23,5 +23,13 @@ public class OpenApiConfig {
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")));
+                .servers(Arrays.asList(
+                        new Server()
+                                .url("https://object-detection-api-production.up.railway.app")
+                                .description("Production server (Railway)"),
+                        new Server()
+                                .url("http://localhost:8080")
+                                .description("Local development server")
+                ));
     }
 }
